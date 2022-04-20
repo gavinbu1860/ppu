@@ -26,7 +26,7 @@ docker run -d -it --name ppu-gcc11-dev-$(whoami) \
          -w /home/admin/dev \
          --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
          --cap-add=NET_ADMIN \
-         reg.docker.alibaba-inc.com/secretflow/ppu-gcc11-dev:latest
+         registry.hub.docker.com/secretflow/ppu-gcc11-dev:latest
 
 # attach to build container
 docker exec -it ppu-gcc11-dev-$(whoami) bash
