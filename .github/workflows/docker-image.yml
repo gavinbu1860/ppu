@@ -1,0 +1,28 @@
+name: Docker Image Build & Push
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Bump Version
+        default: v0.1
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out code
+
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        name: Build & push Docker image
+        with:
+          image: secretflow/ppu-gcc11-anolis-dev
+          tags: ${{ github.event.inputs.version }}, latest
+          registry: docker.io
+          directory: docker/
+          dockerfile: docker/ppu-gcc11-anolis-dev.Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          githubOrg: secretflow

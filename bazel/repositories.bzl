@@ -38,7 +38,7 @@ def ppu_deps():
     maybe(
         git_repository,
         name = "simplest_ot",
-        commit = "c7b495e9b438d91341bb0bbf6d9c69011a6d3c46",
+        commit = "540047499cd34ebc6e8f4f42322c088511bd7434",
         recursive_init_submodules = True,
         remote = "{}/simplest-ot.git".format(SECRETFLOW_GIT),
     )
@@ -46,7 +46,7 @@ def ppu_deps():
     maybe(
         git_repository,
         name = "aio",
-        commit = "1520ef970868d86f4b0e8902cf4862301e599d92",
+        commit = "2726a6b9e6d0a74f08a2ee55e36e938b1f921975",
         recursive_init_submodules = True,
         remote = "{}/aio.git".format(SECRETFLOW_GIT),
     )

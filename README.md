@@ -16,6 +16,21 @@ Currently, we mainly focus on the `provable` security. It contains a secure runt
 ## Build
 
 ### Prerequisite
+
+#### Docker
+
+```sh
+## start container
+docker run -d -it --name ppu-gcc11-dev-$(whoami) \
+         --mount type=bind,source="$(pwd)",target=/home/admin/dev/ \
+         -w /home/admin/dev \
+         --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
+         --cap-add=NET_ADMIN \
+         reg.docker.alibaba-inc.com/secretflow/ppu-gcc11-dev:latest
+
+# attach to build container
+docker exec -it ppu-gcc11-dev-$(whoami) bash
+```
 #### Linux
 
 ```sh
