@@ -84,7 +84,7 @@ py_wheel(
     license = LICENSE,
     platform = select({
         "@bazel_tools//src/conditions:darwin": "macosx_10_14_x86_64",
-        "//conditions:default": "linux_x86_64",
+        "//conditions:default": "manylinux2014_x86_64",
     }),
     python_requires = ">=3.8",
     python_tag = "py3",
