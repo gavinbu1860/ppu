@@ -8,7 +8,7 @@ Currently, we mainly focus on the `provable` security. It contains a secure runt
 
 ## Contents
 
-- [Documentation](TODO: doc)
+- [Documentation](https://ppu.readthedocs.io/)
 - [Roadmap](TODO: doc)
 - [Build and test](#Build)
 - [FAQ](#FAQ)
